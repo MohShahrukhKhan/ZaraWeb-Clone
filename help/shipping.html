@@ -112,7 +112,7 @@
     <div class="hamburger" id="style-9">
         <div class="divflexdiv">
             <ul>
-                <li><a  href="../women.html"><b>WOMAN</b></a></li>
+                <div id="loginId"></div>
                 <li><a  href="../mans.html">MAN</a></li>
                 <li><a  href="../boys.html">KIDS</a></li>
             </ul>
@@ -277,9 +277,57 @@
 
 </body>
 </html>
-<script  src="../index.js">
+<script>
     // --------------------------------ham_----------------------------
     
     
+
+  var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+if(userdata.length>0){
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+}else{
+    loginAnchar.innerText="LOG IN"
+}
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="../loginPage.html"
+}else{
+  loginAnchar.href="../signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
+var ham=document.querySelector(".hamburger");
+     var hamcross=document.querySelector("i");
+
+     ham.style.display="none";
+    var  count=0
+    function myFunction() {
+       count++
+       if(count%2==1){
+        ham.style.display="block";
+        hamcross.setAttribute("class","fas fa-times fa-2x")
+
+       }else{
+        ham.style.display="none";
+        hamcross.setAttribute("class","fa fa-bars fa-2x")
+       }
+       
+        
+           
+         
+     
+   
+
+
+
+       
+    }
+
+
     
     </script>
