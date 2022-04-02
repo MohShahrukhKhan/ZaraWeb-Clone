@@ -153,7 +153,8 @@
                   <hr>
               </div> -->
               <div class="navitems cartdiv">
-                  <div> <a id="userId" href="../loginPage.html">LOG IN</a> </div>
+              
+  <div id="loginId"></div>
                   <div> <a href="./help/help.html">HELP</a> </div>
                   <!-- <div><i class="fas fa-suitcase-rolling"></i></div> -->
               </div>
@@ -275,6 +276,23 @@
 </html>
 
 <script>
+
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="../loginPage.html"
+}else{
+  loginAnchar.href="../signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
   var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
 var user=document.querySelector("#userId")
 
