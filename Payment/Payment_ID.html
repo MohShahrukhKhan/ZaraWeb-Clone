@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/19d9091ea0.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>PayMentId</title>
   </head>
 
   <body>
@@ -205,7 +205,8 @@
                       <hr>
                   </div> -->
                   <div class="navitems cartdiv">
-                      <div> <a id="userId" href="../loginPage.html">LOG IN</a> </div>
+                    <div id="loginId"></div>
+
                       <div> <a href="./help/help.html">HELP</a> </div>
                       <!-- <div><i class="fas fa-suitcase-rolling"></i></div> -->
                   </div>
@@ -324,7 +325,27 @@
   </body>
 </html>
 <script>
- 
+ var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="../loginPage.html"
+}else{
+  loginAnchar.href="../signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
+
+
+
+
+
   var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
 var user=document.querySelector("#userId")
 
