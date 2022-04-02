@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/19d9091ea0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment Method</title>
+        <style>
+          body {
+            /* position: relative;  */
+            padding-bottom: 58px;
+            /* min-height: 100vh; */
+            width: 80%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          #main {
+            width: 90%;
+            margin: auto;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 300px;
+          }
+
+          #hed {
+            margin-top: 140px;
+            margin-bottom: 50px;
+            font-size: xx-large;
+          }
+
+          #dic {
+            display: flex;
+            justify-content: space-between;
+            border-top: 0.5px solid rgba(0, 128, 128, 0.465);
+            border-bottom: 0.5px solid rgba(0, 128, 128, 0.465);
+          }
+
+          #matt {
+            margin-top: 14px;
+          }
+
+          .colr {
+            color: rgba(0, 128, 128, 0.774);
+          }
+
+          #h {
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+            font-size: x-large;
+          }
+
+          #underline {
+            text-decoration: underline;
+            color: teal;
+          }
+
+          #payBOXc {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 15px 90px;
+            margin: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+          }
+
+          footer {
+            display: flex;
+            background-color: white;
+            justify-content: end;
+            align-items: flex-end;
+            width: 88%;
+            position: fixed;
+            bottom: 0px;
+            padding: 10px;
+          }
+
+          footer > div {
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            padding: 3px;
+          }
+
+          #about {
+            display: flex;
+          }
+
+          li {
+            font-size: 8px;
+            font-weight: 550;
+            margin-top: 5px;
+          }
+
+          ul {
+            list-style: none;
+          }
+
+          #about {
+            margin-top: 200px;
+            margin-left: 35px;
+          }
+
+          .head {
+            font-weight: bold;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          #copy {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            justify-content: space-between;
+            text-align: right;
+          }
+
+          #last {
+            margin-top: -10px;
+          }
+
+          #bottom {
+            width: 90%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 70px;
+            font-size: 12px;
+          }
+
+          #bottom > h6 {
+            margin-top: 0px;
+            margin-bottom: 3px;
+          }
+
+          #circle {
+            border: 2px solid black;
+            padding: 0px;
+          }
+
+          #paybox {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          #paybox > div {
+            border: 2px solid black;
+            border-color: rgb(235, 235, 235);
+            width: 160px;
+            margin: 15px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+          }
+
+          #cash {
+            border: 2px solid black;
+            border-color: rgb(235, 235, 235);
+            width: 160px;
+            color: rgb(192, 192, 192);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+          }
+
+          #in {
+            width: 160px;
+            margin: 15px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+          }
+
+          #in2 {
+            border: 2px solid black;
+            border-color: rgb(235, 235, 235);
+            width: 160px;
+            margin: 15px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          #info {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+            font-weight: lighter;
+            cursor: pointer;
+          }
+
+          #amount {
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+
+          *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #cartContainer{
+            display: flex;
+            height: 450px;
+            margin-left: 30px;
+            overflow-x: scroll;
+        }
+        #cartContainer2{
+            bottom: 0;
+            position: sticky;
+            height: 100px;
+        }
+
+        #boxes{
+            min-width:390px;
+            margin-right: 50px;
+        }
+        #avatar{
+            height: 430px;
+            margin-left: -10px;
+        }
+        #item{
+            display: flex;
+            margin-left: 20px;
+        }
+        #del{
+            margin-top: 180px;
+            margin-left: 10px;
+            font-size: 12px;
+            color: grey;
+            cursor: pointer;
+        }
+        #cost{
+            margin-top: 150px;
+            margin-left: 10px;
+            font-size: 12px;
+            position: relative;
+            color: grey;
+        }
+        #productName,#ref{
+            margin-left: 10px;
+            font-size: 10px;
+            color: rgb(49, 49, 49);
+            margin-bottom: 0px;
+        }
+        h3{
+            margin-left: 30px;
+        }
+        #cartContainer2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 0px;
+            margin-bottom: -50px;
+            width: 98%;
+        }
+        #total{
+            display: flex;
+            color: black;
+            font-size: 12px;
+            font-weight: 550;
+            margin-bottom: -20px;
+        }
+        #final{
+            text-align: right;
+            font-size: 10px;
+            color: grey;
+            margin-right: 30px;
+            margin-top: 20px;
+            
+        }
+        #continue{
+            background-color: black;
+            color: white;
+            font-weight: 550;
+            border: none;
+            width: 250px;
+            height: 35px;
+            margin-left: 10px;
+            margin-right: 5px;
+     
+            cursor: pointer;
+        }
+        #total-amount{
+            margin-left: 20px;
+        }
+        h3{
+            margin-top: 150px;
+        }
+        nav{
+            margin-top: -140px;
+        }
+        </style>
+      </head>
+
+      <body>
+  <!-- ------------------nav______________________ -->
+
+  <nav>
+        
+        
+
+
+
+    <div id="maindiv">
+        <div class="leftdiv">
+            <div class="ham">
+                <!-- <input type="checkbox" name="toggle-nav"> -->
+                <label for="toggle-nav">
+                    <span class="menu-icon"></span>
+                </label>
+                <section class="side-nav-panel">
+                </section>
+                <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars fa-2x"></i>
+                </a> -->
+            </div>
+            <div class="logo">
+              <a href="../index.html">
+                <img class="logomain" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="logo">
+              </a>
+              </div>
+        </div>
+        <div class="rightdiv">
+            <div class="searchdiv searchdivcart">
+                <!-- <div>
+                    <p><b> <a href="SearchPage.html">SEARCH</a></b> </p>
+                </div>
+                <hr>
+            </div> -->
+            <div class="navitems cartdiv">
+                <div> <a id="userId" href="../loginPage.html">LOG IN</a> </div>
+                <div> <a href="../help/help.html">HELP</a> </div>
+                <!-- <div><i class="fas fa-suitcase-rolling"></i></div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+</nav>
+
+
+
+
+        <div id="main">
+          <div id="hed">CHOOSE A PAYMENT METHOD</div>
+          <div id="paybox">
+            <div>
+              <a href="Payment_ID.html">
+                <img
+                  src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg"
+                  alt=""
+                />
+              </a>
+
+              <p>VISA</p>
+            </div>
+            <div>
+              <a href="Payment_ID.html">
+                <img
+                  src="https://static.zara.net/static/images/payment/payment/icon-payment-mastercard.svg"
+                  alt=""
+                />
+              </a>
+
+              <p>MASTERCARD</p>
+            </div>
+            <div>
+              <a href="Payment_ID.html">
+                <img
+                  src="https://static.zara.net/static/images/payment/payment/icon-payment-amex_2.svg"
+                  alt=""
+                />
+              </a>
+
+              <p>AMERICAN EXPRESS</p>
+            </div>
+            <div>
+              <a href="Payment_ID.html"
+                ><img
+                  src="https://static.zara.net/static/images/payment/payment/ru-pay.svg"
+                  alt=""
+              /></a>
+
+              <p>RUPAY</p>
+            </div>
+            <div>
+              <a href="Payment_ID.html"
+                ><img
+                  src="https://static.zara.net/static/images/payment/payment/upi.svg"
+                  alt=""
+              /></a>
+
+              <p>UNIFIED PAYMENTS INTERFACE</p>
+            </div>
+          </div>
+        </div>
+      
+  
+  </body>
+</html>
+<script>
+  
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+var user=document.querySelector("#userId")
+
+console.log(userdata)
+if(userdata.length>0){
+  user.innerText=userdata[userdata.length-1]["username"]
+}
+   console.log(user)
+
+
+    var product = JSON.parse(localStorage.getItem("cartdata")) || [];
+    displayData(product);
+
+    function deleteTask(index)
+    {
+        document.querySelector("#cartContainer").innerHTML = "";
+
+
+        product.splice(index,1);
+        
+        localStorage.setItem("cartdata",JSON.stringify(product));
+        displayData(product);
+    }
+
+    function displayData(product)
+    {
+        product.map(function(elem,index){
+            var div = document.createElement("div");
+            div.setAttribute("id","boxes")
+            
+            
+            var div2 = document.createElement("div");
+            div2.setAttribute("id","item");
+            
+            var image = document.createElement("img");
+            image.setAttribute("src",elem.imageURL);
+            image.setAttribute("id","avatar");
+    
+            var div3 = document.createElement("div");
+    
+            var ref = document.createElement("p");
+            ref.textContent = "REF. | 4065/412";
+            ref.setAttribute("id","ref");
+    
+            var name = document.createElement("p");
+            name.textContent = elem.productName;
+            name.setAttribute("id","productName");
+    
+    
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+            price.setAttribute("id","cost");
+    
+    
+            var del = document.createElement("p");
+            del.textContent = "DELETE";
+            del.setAttribute("id","del");
+            del.addEventListener("click",function(){
+                deleteTask(index);
+            })
+    
+            div3.append(ref,name,price,del);
+    
+            div2.append(image,div3);
+    
+            div.append(div2);
+    
+            document.querySelector("#cartContainer").append(div);
+        });
+
+        var prices = [];
+    product.map(function(elem){
+        var price = elem.price;
+        var bag = "";
+        for(var i=0; i<price.length; i++)
+        {
+            if(price[i] == "₹" || price[i]==",")
+            {
+                continue;
+            }
+            else if(price[i] == ".")
+            {
+                break;
+            }
+            else{
+                bag = bag+price[i];
+            }
+        }
+        prices.push(bag);
+    });
+
+    var prices = prices.map(Number);
+    
+    var total = 0;
+
+    for(var j=0; j<prices.length; j++)
+    {
+        total = total+prices[j];
+    }
+
+    // console.log(total);
+
+    document.querySelector("#total-amount").textContent = `₹ ${total}.00`;
+    }
+
+
+
+    var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+var user=document.querySelector("#userId")
+
+console.log(userdata)
+if(userdata.length>0){
+  user.innerText=userdata[userdata.length-1]["username"]
+}
+   console.log(user)
+
+</script>
