@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/19d9091ea0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment Info</title>
+        <style>
+          body {
+            /* position: relative;  */
+            padding-bottom: 58px;
+            /* min-height: 100vh; */
+            width: 80%;
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          #main {
+            width: 90%;
+            margin: auto;
+            font-weight: bold;
+          }
+
+          #hed {
+            margin-top: 140px;
+            margin-bottom: 50px;
+            font-size: x-large;
+          }
+
+          #dic {
+            display: flex;
+            justify-content: space-between;
+            border-top: 0.5px solid rgba(0, 128, 128, 0.465);
+            border-bottom: 0.5px solid rgba(0, 128, 128, 0.465);
+          }
+
+          #matt {
+            margin-top: 14px;
+          }
+
+          .colr {
+            color: rgba(0, 128, 128, 0.774);
+          }
+
+          #h {
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+            font-size: x-large;
+          }
+
+          #underline {
+            text-decoration: underline;
+            color: teal;
+          }
+
+          #payBOXc {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 15px 90px;
+            margin: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+          }
+
+          footer {
+            display: flex;
+            background-color: white;
+            justify-content: end;
+            align-items: flex-end;
+            width: 88%;
+            position: fixed;
+            bottom: 0px;
+            padding: 10px;
+          }
+
+          footer > div {
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            padding: 3px;
+          }
+
+          #about {
+            display: flex;
+          }
+
+          li {
+            font-size: 8px;
+            font-weight: 550;
+            margin-top: 5px;
+          }
+
+          ul {
+            list-style: none;
+          }
+
+          #about {
+            margin-top: 300px;
+            margin-left: 35px;
+          }
+
+          .head {
+            font-weight: bold;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          #copy {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            justify-content: space-between;
+            text-align: right;
+          }
+          img {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+          }
+
+          #last {
+            margin-top: -10px;
+          }
+
+          #bottom {
+            width: 90%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 70px;
+            font-size: 12px;
+          }
+
+          #bottom > h6 {
+            margin-top: 0px;
+            margin-bottom: 3px;
+          }
+          #in {
+            width: 160px;
+            margin: 15px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+          }
+          #cash {
+            border: 2px solid black;
+            border-color: rgb(235, 235, 235);
+            width: 120px;
+            color: rgb(192, 192, 192);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+          }
+          #text {
+            border: 0px;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            width: 300px;
+            padding: 10px;
+          }
+        </style>
+      </head>
+
+      <body>
+        <nav>
+        
+        
+
+
+
+          <div id="maindiv">
+              <div class="leftdiv">
+                  <div class="ham">
+                      <!-- <input type="checkbox" name="toggle-nav"> -->
+                      <label for="toggle-nav">
+                          <span class="menu-icon"></span>
+                      </label>
+                      <section class="side-nav-panel">
+                      </section>
+                      <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars fa-2x"></i>
+                      </a> -->
+                  </div>
+                  <div class="logo">
+                      <a href="../index.html">
+                      <img class="logomain" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="logo"></a>
+                  </div>
+              </div>
+              <div class="rightdiv">
+                  <div class="searchdiv searchdivcart">
+                      <!-- <div>
+                          <p><b> <a href="SearchPage.html">SEARCH</a></b> </p>
+                      </div>
+                      <hr>
+                  </div> -->
+                  <div class="navitems cartdiv">
+                      <div> <a id="userId" href="../loginPage.html">LOG IN</a> </div>
+                      <div> <a href="./help/help.html">HELP</a> </div>
+                      <!-- <div><i class="fas fa-suitcase-rolling"></i></div> -->
+                  </div>
+  
+              </div>
+          </div>
+     
+     
+  </nav>
+
+
+
+        <div id="main">
+          <div id="hed">ENTER YOUR VPA</div>
+          <div id="in">
+            <div id="cash">
+              <img
+                src="https://static.zara.net/static/images/payment/payment/upi.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <input id="text" type="text" />
+        </div>
+      <!-- ===============================commonfooter---------------- -->
+
+<div id="commonfooter">
+   
+  
+    
+    <div id="commonfooterlists">
+       <table id="table" >
+           <thead>
+               <div >
+
+                   <tr>
+                       <th>help</th>
+                       <th>follow us</th>
+                       <th>company</th>
+                       <th>policies</th>
+                    </tr>
+                </div>
+                </thead>
+           <tbody>
+               <tr>
+                   <td>shop at zara.com</td>
+                   <td>newsletter</td>
+                   <td>about us</td>
+                   <td>privacy policy</td>
+               </tr>
+               <tr>
+                   <td>product</td>
+                   <td>instagram</td>
+                   <td>join life</td>
+                   <td>purchase conditions</td>
+               </tr>
+               <tr>
+                   <td>payment</td>
+                   <td>facebook</td>
+                   <td>offices</td>
+                   <td>cookies settings</td>
+               </tr>
+               <tr>
+                   <td>shipping</td>
+                   <td>twitter</td>
+                   <td>stories</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>exchanges and returns</td>
+                   <td>pinterest</td>
+                   <td>work with us</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>shops and company</td>
+                   <td>youtube</td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>clothes collection programme</td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>my account</td>
+               </tr>
+           </tbody>
+       </table>
+    </div>
+   
+    <div id="commonfootercountry">
+        <div>INDIA</div>
+        <div id="commonfooterrights">
+            <div>ENGLISH</div>
+            <div><i class="fa-solid fa-copyright"></i><span>ALL RIGHTS RESERVED</span></div>
+        </div>
+    </div>
+    <div id="commonfooteraddress">
+        <p>name and adress of the manufacturer:
+            <br>industria de diseno textil, s.a. (inditex, s.a.)
+            <br>avenida de la diputacion, edificio inditex, 15143, arteixo(a coruna), spain.
+        </p>
+    </div>
+</div>
+
+
+
+        <footer>
+          <a style="text-decoration: none;" href="../deliveryPage.html">
+            <div id="payBOXc">CONTINUE</div>
+          </a>
+        </footer>
+     
+  </body>
+</html>
+<script>
+ 
+  var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+var user=document.querySelector("#userId")
+
+console.log(userdata)
+if(userdata.length>0){
+  user.innerText=userdata[userdata.length-1]["username"]
+}
+   console.log(user)
+
+</script>
