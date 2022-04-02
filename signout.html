@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/19d9091ea0.js" crossorigin="anonymous"></script>
+
+    <title>SignOut</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            display: flex;
+      
+            margin-left: 12%;
+            margin-top: 150px;
+        
+            width: 70%;
+        }
+        #container>div{
+            box-shadow: none;
+        }
+        p{
+            font-size: 10.5px;
+            font-family: 'Neue-Helvetica', Helvetica, Arial, sans-serif;
+            font-weight: 600;
+        }
+        #login{
+            margin-right: 200px;
+          
+        }
+        #mail,#pwd{
+            width: 250px;
+            height: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            font-size: 10px;
+            font-weight: 500;
+            border-bottom: 1px solid;
+        }
+        #mail{
+            margin-top: 0px;
+        }
+        #h1{
+            margin-bottom: 30px;
+        }
+        #sub,#create{
+            width: 250px;
+            height: 35px;
+            border: 0px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin-top: 20px;
+            font-size: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        #p{
+            cursor: pointer;
+            margin-bottom: 35px;
+        }
+        #p1{
+            margin-bottom: 20px;
+        }
+        #p2{
+            margin-bottom: 81px;
+        }
+        #h2{
+            margin-bottom: 30px;
+        }
+       
+        
+        li{
+            font-size: 9px;
+            font-weight: 550;
+            margin-top: 5px;
+        }
+        ul{
+            list-style: none;
+        }
+        
+        .head{
+            font-weight: bold;
+            font-size: 12px;
+        }
+        #copy{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            justify-content: space-between;
+            text-align: right;
+        }
+        #last{
+            margin-top: -10px;
+        }
+        #bottom{
+            width: 90%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 70px;
+            font-size: 12px;
+        }
+        #bottom > h6{
+            margin-top: 0px;
+            margin-bottom: 3px;
+        }
+        .form-control{
+            box-shadow: none;
+            border-radius: 0px;
+            border-style: none none solid none;
+            transition: all .5s;
+            padding-bottom: 0px;
+            padding-top: 10px;
+        }
+        .form-label{
+            font-size: 10px;
+            font-weight: bold;
+            color: gray;
+            display: block;
+            opacity: 1;
+            transform: translateY(-3em);
+            transform-origin: 0 0;
+            transition: all .3s;
+        }
+        .form-group:focus-within{
+            transform:scale(1.05,1.5)
+        }
+        .form-control:focus{
+            box-shadow: none;
+            outline: none;
+        }
+        .form-control:focus + .form-label, .form-control:not(:placeholder-shown)+.form-label{
+            transform: translateY(-4em) scale(0.8);
+        }
+        .form-control::placeholder{
+            color: transparent;
+        }
+        /* nav{
+            position: relative;
+        } */
+    </style>
+    
+</head>
+<body>
+
+    <!-- ------------------nav______________________ -->
+
+    <nav>
+        
+        
+
+
+
+        <div id="maindiv">
+            <div class="leftdiv">
+                <div class="ham">
+                    <!-- <input type="checkbox" name="toggle-nav"> -->
+                    <label for="toggle-nav">
+                        <span class="menu-icon"></span>
+                    </label>
+                    <section class="side-nav-panel">
+                    </section>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </a>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+
+                        <img class="logomain" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="rightdiv">
+                <div class="searchdiv">
+                    <div>
+                        <p><b> <a href="SearchPage.html">SEARCH</a></b> </p>
+                    </div>
+                    <hr>
+                </div>
+                <div class="navitems">
+               
+<div id="loginId"></div>
+                    <div> <a href="./help/help.html">HELP</a> </div>
+                    <div><a href="./cart.html"><i class="fas fa-suitcase-rolling"></i></a></div>
+                </div>
+
+            </div>
+        </div>
+   
+    <div class="hamburger" id="style-9">
+        <div class="divflexdiv">
+            <ul>
+                <li><a  href="women.html"><b>WOMAN</b></a></li>
+                <li><a  href="mans.html">MAN</a></li>
+                <li><a  href="boys.html">KIDS</a></li>
+            </ul>
+        </div>
+        <div class="divhamitems">
+            <ul>
+
+
+                <li><a href="new.html"> NEW </a></li>
+                <li><a href="new.html">ZEPETO | TRFNEW</a></li>
+                <li><a href="new.html">BEST SELLERSNEW</a></li>
+                <li><a href="new.html">BLAZERS </a></li>
+                <li><a href="new.html"> DRESSES | JUMPSUITS </a></li>
+                <li><a href="new.html"> SHIRTS</a></li>
+                <li><a href="new.html">TROUSERS </a></li>
+                <li><a href="new.html">TOPS | CORSETS</a></li>
+                <li><a href="new.html"> BODYSUITS </a></li>
+                <li><a href="new.html"> T-SHIRTS </a></li>
+                <li><a href="new.html"> JEANS </a></li>
+                <li><a href="new.html"> SKIRTS </a></li>
+                <li><a href="new.html"> SHORTS | SKORTS </a></li>
+                <li><a href="new.html"> CO-ORD SETS </a></li>
+                <li><a href="new.html"> SUITS </a></li>
+                <li><a href="new.html"> BASICSNEW </a></li>
+                <li><a href="new.html"> KNITWEAR </a></li>
+                <li><a href="new.html"> COATS | TRENCH COATS </a></li>
+                <li><a href="new.html"> JACKETS | OVERSHIRTS </a></li>
+                <li><a href="shoes.html"> SHOES </a></li>
+                <li><a href="bags.html"> BAGS </a></li>
+                <li><a href="new.html"> SWIMWEARNEW </a></li>
+                <li><a href="new.html"> ACCESSORIES </a></li>
+                <li><a href="new.html"> PERFUMES </a></li>
+                <li><a href="new.html"> SPRING BREEZE </a></li>
+                <li><a href="new.html" style="color: red;"> SPECIAL PRICE </a></li>
+                <li><a href="new.html">
+            </ul>
+    
+        </div>
+
+        <div class="specialediton">
+            <a href="">  S P E C I A L &nbsp;&nbsp; E D I T I O N    </a>
+        </div>
+
+
+        <div class="info">
+            <a href="">+&nbsp;INFO </a>
+        </div>
+      
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- -------------------------------------------------------- -->
+    <div id="container">
+        <div id="login">
+            <h2 id="h1">LOG IN</h2>
+            <form action="">
+                <div class="form-group">
+                    <input type="text"  id="mail" placeholder="email"  autocomplete="off" class="form-control" required>
+                    <label for="" class="form-label">E-MAIL</label>
+                </div>
+                <div class="form-group">
+                    <input type="password"  id="pwd" placeholder="password" class="form-control" required>
+                    <label for="" class="form-label">PASSWORD</label>
+                </div>
+                <p id="p">HAVE YOU FORGOTTEN YOUR PASSWORD?</p>
+                <input type="submit" value="LOG IN" id="sub">
+            </form>
+        </div>
+
+        <div id="reg">
+            <h2 id="h2">ARE YOU NOT &nbsp;<span class="singoutName" style="text-transform:uppercase" ></span>?</h2>
+            <p id="p1" style="color: gray;">"<span class="sigoutNameInner" style="text-transform:uppercase" ></span>"&nbsp; IS LOGGED IN ON THIS DEVICE.</p>
+            <p id="p2" style="color: grey;">PLEASE,&nbsp;<span><a style="color: black;" id="removeLoginName">SIGN OUT</a></span>&nbsp;TO BEGIN BROWSING AS AN ANONYMOUS USER.</p>
+
+           
+        </div>
+    </div>
+    
+<!-- ===============================commonfooter---------------- -->
+
+<div id="commonfooter">
+   
+  
+    
+    <div id="commonfooterlists">
+       <table id="table" >
+           <thead>
+               <div >
+
+                   <tr>
+                       <th>help</th>
+                       <th>follow us</th>
+                       <th>company</th>
+                       <th>policies</th>
+                    </tr>
+                </div>
+                </thead>
+           <tbody>
+               <tr>
+                   <td>shop at zara.com</td>
+                   <td>newsletter</td>
+                   <td>about us</td>
+                   <td>privacy policy</td>
+               </tr>
+               <tr>
+                   <td>product</td>
+                   <td>instagram</td>
+                   <td>join life</td>
+                   <td>purchase conditions</td>
+               </tr>
+               <tr>
+                   <td>payment</td>
+                   <td>facebook</td>
+                   <td>offices</td>
+                   <td>cookies settings</td>
+               </tr>
+               <tr>
+                   <td>shipping</td>
+                   <td>twitter</td>
+                   <td>stories</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>exchanges and returns</td>
+                   <td>pinterest</td>
+                   <td>work with us</td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>shops and company</td>
+                   <td>youtube</td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>clothes collection programme</td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td>my account</td>
+               </tr>
+           </tbody>
+       </table>
+    </div>
+   
+    <div id="commonfootercountry">
+        <div>INDIA</div>
+        <div id="commonfooterrights">
+            <div>ENGLISH</div>
+            <div><i class="fa-solid fa-copyright"></i><span>ALL RIGHTS RESERVED</span></div>
+        </div>
+    </div>
+    <div id="commonfooteraddress">
+        <p>name and adress of the manufacturer:
+            <br>industria de diseno textil, s.a. (inditex, s.a.)
+            <br>avenida de la diputacion, edificio inditex, 15143, arteixo(a coruna), spain.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+ 
+</body>
+</html>
+
+<script>
+// --------------------------------ham_----------------------------
+// --------------------------------ham_----------------------------
+
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+if(userdata.length>0){
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+}else{
+    loginAnchar.innerText="LOG IN"
+}
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="loginPage.html"
+}else{
+  loginAnchar.href="signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
+
+
+
+var ham=document.querySelector(".hamburger");
+     var hamcross=document.querySelector("i");
+
+     ham.style.display="none";
+    var  count=0
+    function myFunction() {
+       count++
+       if(count%2==1){
+        ham.style.display="block";
+        hamcross.setAttribute("class","fas fa-times fa-2x")
+
+       }else{
+        ham.style.display="none";
+        hamcross.setAttribute("class","fa fa-bars fa-2x")
+       }
+       
+        
+           
+
+
+         
+     
+   
+
+
+
+       
+    }
+
+var regUsers=JSON.parse(localStorage.getItem("USERSDATA"));
+    var cartData = [];
+    localStorage.setItem("cartdata",JSON.stringify(cartData));
+
+    document.querySelector("form").addEventListener("submit",loginaccount);
+
+    function loginaccount(event)
+    {
+        event.preventDefault();
+
+        var email = document.querySelector("#mail").value;
+        var password = document.querySelector("#pwd").value;
+
+        var count = 0;
+        for(var i=0; i<regUsers.length; i++)
+        {
+            if(regUsers[i].Email == email && regUsers[i].Password == password)
+            {
+                alert("LOGIN SUCCESSFUL");
+                var customer=[];
+                cobj={"Email":regUsers[i].Email,"Password":regUsers[i].Password,"username":regUsers[i].username,"Pincode":regUsers[i].Pincode,"Address":regUsers[i].Address,"Addaddress":regUsers[i].Addaddress,"Locality":regUsers[i].Locality,"State":regUsers[i].State, "Prefix":regUsers[i].Prefix, "Mobile":regUsers[i].Mobile}
+                customer.push(cobj);
+                localStorage.setItem("KYC",JSON.stringify(customer))
+                window.location.href = "index.html";
+
+            }
+            else{
+                count++;
+            }
+        }
+
+        if(count == regUsers.length)
+        {
+            alert("Wrong Details")
+        }
+    }
+
+  
+   
+    document.querySelector(".singoutName").innerText=regUsers[regUsers.length-1]["username"]
+    document.querySelector(".sigoutNameInner").innerText=regUsers[regUsers.length-1]["username"]
+
+    document.querySelector("#removeLoginName").addEventListener("click",function(){
+        console.log("shahrukh")
+        var userdata=[] 
+        var obj={"Email":undefined,"Password":undefined,"username":"LOG IN","Pincode":undefined,"Address":undefined,"Addaddress":undefined,"Locality":undefined,"State":undefined, "Prefix":undefined, "Mobile":undefined, "Promoemail":undefined, "tcbox":undefined}
+        console.log(obj)
+        userdata.push(obj);
+        localStorage.setItem("USERSDATA",JSON.stringify(userdata))
+        
+        window.location.href = "index.html"
+     
+       
+    })
+   
+    function regPage(){
+    }
+
+</script>
+
