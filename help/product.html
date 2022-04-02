@@ -101,7 +101,7 @@
                     <hr>
                 </div>
                 <div class="navitems">
-                    <div> <a href="../loginPage.html">LOG IN</a> </div>
+                    <div id="loginId"></div>
                     <div> <a href="../help/help.html">HELP</a> </div>
                     <div><a href="../cart.html"><i class="fas fa-suitcase-rolling"></i></a></div>
                 </div>
@@ -276,10 +276,57 @@
 </div>
 
 </body>
-</html>
-<script  src="../index.js">
+</html><script>
     // --------------------------------ham_----------------------------
     
     
+
+  var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+if(userdata.length>0){
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+}else{
+    loginAnchar.innerText="LOG IN"
+}
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="../loginPage.html"
+}else{
+  loginAnchar.href="../signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
+var ham=document.querySelector(".hamburger");
+     var hamcross=document.querySelector("i");
+
+     ham.style.display="none";
+    var  count=0
+    function myFunction() {
+       count++
+       if(count%2==1){
+        ham.style.display="block";
+        hamcross.setAttribute("class","fas fa-times fa-2x")
+
+       }else{
+        ham.style.display="none";
+        hamcross.setAttribute("class","fa fa-bars fa-2x")
+       }
+       
+        
+           
+         
+     
+   
+
+
+
+       
+    }
+
+
     
     </script>
