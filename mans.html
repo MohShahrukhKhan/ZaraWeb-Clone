@@ -44,9 +44,10 @@
                     <hr>
                 </div>
                 <div class="navitems">
-                    <div> <a href="loginPage.html">LOG IN</a> </div>
+                  <div id="loginId"></div>
+
                     <div> <a href="./help/help.html">HELP</a> </div>
-                    <div><i class="fas fa-suitcase-rolling"></i></div>
+                    <div><a href="./cart.html"><i class="fas fa-suitcase-rolling"></i></a></div>
                 </div>
 
             </div>
@@ -61,37 +62,38 @@
             </ul>
         </div>
         <div class="divhamitems">
-            <ul>
+          <ul>
 
 
-                <li><a href=""> NEW </a></li>
-                <li><a href="">ZEPETO | TRFNEW</a></li>
-                <li><a href="">BEST SELLERSNEW</a></li>
-                <li><a href="">BLAZERS </a></li>
-                <li><a href=""> DRESSES | JUMPSUITS </a></li>
-                <li><a href=""> SHIRTS</a></li>
-                <li><a href="">TROUSERS </a></li>
-                <li><a href="">TOPS | CORSETS</a></li>
-                <li><a href=""> BODYSUITS </a></li>
-                <li><a href=""> T-SHIRTS </a></li>
-                <li><a href=""> JEANS </a></li>
-                <li><a href=""> SKIRTS </a></li>
-                <li><a href=""> SHORTS | SKORTS </a></li>
-                <li><a href=""> CO-ORD SETS </a></li>
-                <li><a href=""> SUITS </a></li>
-                <li><a href=""> BASICSNEW </a></li>
-                <li><a href=""> KNITWEAR </a></li>
-                <li><a href=""> COATS | TRENCH COATS </a></li>
-                <li><a href=""> JACKETS | OVERSHIRTS </a></li>
-                <li><a href=""> SHOES </a></li>
-                <li><a href=""> BAGS </a></li>
-                <li><a href=""> SWIMWEARNEW </a></li>
-                <li><a href=""> ACCESSORIES </a></li>
-                <li><a href=""> PERFUMES </a></li>
-                <li><a href=""> SPRING BREEZE </a></li>
-                <li><a href="" style="color: red;"> SPECIAL PRICE </a></li>
-                <li><a href="">
-            </ul>
+            <li><a href="new.html"> NEW </a></li>
+            <li><a href="new.html">ZEPETO | TRFNEW</a></li>
+            <li><a href="new.html">BEST SELLERSNEW</a></li>
+            <li><a href="new.html">BLAZERS </a></li>
+            <li><a href="new.html"> DRESSES | JUMPSUITS </a></li>
+            <li><a href="new.html"> SHIRTS</a></li>
+            <li><a href="new.html">TROUSERS </a></li>
+            <li><a href="new.html">TOPS | CORSETS</a></li>
+            <li><a href="new.html"> BODYSUITS </a></li>
+            <li><a href="new.html"> T-SHIRTS </a></li>
+            <li><a href="new.html"> JEANS </a></li>
+            <li><a href="new.html"> SKIRTS </a></li>
+            <li><a href="new.html"> SHORTS | SKORTS </a></li>
+            <li><a href="new.html"> CO-ORD SETS </a></li>
+            <li><a href="new.html"> SUITS </a></li>
+            <li><a href="new.html"> BASICSNEW </a></li>
+            <li><a href="new.html"> KNITWEAR </a></li>
+            <li><a href="new.html"> COATS | TRENCH COATS </a></li>
+            <li><a href="new.html"> JACKETS | OVERSHIRTS </a></li>
+            <li><a href="shoes.html"> SHOES </a></li>
+            <li><a href="bags.html"> BAGS </a></li>
+            <li><a href="new.html"> SWIMWEARNEW </a></li>
+            <li><a href="new.html"> ACCESSORIES </a></li>
+            <li><a href="new.html"> PERFUMES </a></li>
+            <li><a href="new.html"> SPRING BREEZE </a></li>
+            <li><a href="new.html" style="color: red;"> SPECIAL PRICE </a></li>
+            <li><a href="new.html">
+        </ul>
+
 
         </div>
 
@@ -206,6 +208,27 @@
 <script>
 // --------------------------------ham_----------------------------
 
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+if(userdata.length>0){
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+}else{
+    loginAnchar.innerText="LOG IN"
+}
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="loginPage.html"
+}else{
+  loginAnchar.href="signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
+
+
 var ham=document.querySelector(".hamburger");
      var hamcross=document.querySelector("i");
 
@@ -225,7 +248,7 @@ var ham=document.querySelector(".hamburger");
 
 
     var menData = [
-    //JACKETS AND COATS
+  
     {
       imageURL:
         "https://static.zara.net/photos///2021/I/0/2/p/0706/336/305/2/w/444/0706336305_2_1_1.jpg?ts=1632298344216",
@@ -898,7 +921,7 @@ var ham=document.querySelector(".hamburger");
         
         localStorage.setItem("productpage",JSON.stringify(elem));     
                 
-        window.location.href = "../pilotpage.html";
+        window.location.href = "selectCart.html";
       })
   
       var title = document.createElement("p");
@@ -925,6 +948,15 @@ var ham=document.querySelector(".hamburger");
     });
 
 
+
+    var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+var user=document.querySelector("#userId")
+
+if(userdata.length>0){
+  user.innerText=userdata[userdata.length-1]["username"]
+}
+   console.log(user)
 
 
 </script>
