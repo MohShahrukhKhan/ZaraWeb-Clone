@@ -69,7 +69,8 @@
                     <hr>
                 </div>
                 <div class="navitems">
-                    <div> <a id="userId" href="loginPage.html">LOG IN</a> </div>
+                  <div id="loginId"></div>
+                    <!-- <div id="loginId"> <a id="userId" href="loginPage.html">LOG IN</a> </div> -->
                     <div> <a href="./help/help.html">HELP</a> </div>
                     <div><a href="./cart.html"><i class="fas fa-suitcase-rolling"></i></a></div>
                 </div>
@@ -210,7 +211,7 @@
                         <img class="d-block w-100 man" src="https://static.zara.net/photos///2021/I/0/2/p/5644/341/800/2/w/444/5644341800_2_1_1.jpg?ts=1628072377647" alt="Second slide">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100 women" src="https://static.zara.net/photos///2021/I/0/1/p/9632/258/800/2/w/334/9632258800_1_1_1.jpg?ts=1639496394747" alt="Third slide">
+                        <img class="d-block w-100 womes1" src="https://static.zara.net/photos///2021/I/0/1/p/9632/258/800/2/w/334/9632258800_1_1_1.jpg?ts=1639496394747" alt="Third slide">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -332,7 +333,29 @@
 <!-- // --------------------------------ham_---------------------------- -->
 <script>
 // / --------------------------------ham_----------------------------
+
+
+
+
 var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+if(userdata.length>0){
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+}else{
+    loginAnchar.innerText="LOG IN"
+}
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="loginPage.html"
+}else{
+  loginAnchar.href="signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
 
 console.log(userdata)
 var ham=document.querySelector(".hamburger");
@@ -386,14 +409,9 @@ grils=document.querySelector(".boys").addEventListener("click",function(){
   window.location.href="boys.html"
 })
 
-
-grils=document.querySelector(".woman").addEventListener("click",function(){
-  window.location.href="woman.html"
-})
 grils=document.querySelector(".man").addEventListener("click",function(){
   window.location.href="man.html"
 })
-
 
 </script>
 
