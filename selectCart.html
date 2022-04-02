@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/19d9091ea0.js" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #container {
+      /* padding-top: 6%; */
+      height: 500px;
+      width: 89%;
+    /* border: 2px solid green; */
+      /* margin-top: -4.7rem; */
+      margin-left: 10%;
+    }
+
+    #leftbox {
+      width: 18%;
+      font-size: 16px;
+      /* padding-top: 10%; */
+      /* overflow:hidden; */
+
+      overflow-y: scroll;
+
+      scrollbar-width: thin;
+
+      margin-top: 7%;
+      margin-right: 9%;
+      /* border: 1px solid red; */
+      height:80%;
+      line-height: 1.5rem;
+    }
+
+    #leftbox p,
+    span {
+      padding-right: 10px;
+      color: grey;
+      text-align: justify;
+    }
+    #leftbox::-webkit-scrollbar {
+      width: 2px; /* width of the entire scrollbar */
+    }
+
+    #leftbox::-webkit-scrollbar-track {
+      background: white; /* color of the tracking area */
+    }
+
+    #leftbox::-webkit-scrollbar-thumb {
+      background-color: black; /* color of the scroll thumb */
+      border-radius: 1px; /* roundness of the scroll thumb */
+      border: 1px solid black; /* creates padding around scroll thumb */
+    }
+    #rightbox {
+      display: flex;
+      width: 60%;
+      /* border: 1px solid red; */
+      height: 100%;
+      font: bolder;
+      box-shadow: none;
+    }
+    img {
+      height: 100%;
+    }
+    #container {
+      display: flex;
+      /* border: 1px solid red; */
+    }
+    select {
+      border-style: none;
+    }
+    #rightbox > div + div {
+      /* border: 1px solid green; */
+      margin-left: 12%;
+      margin-right: 5%;
+      display: flex;
+      flex-direction: column;
+    }
+    #rightbox > div + div * {
+      padding: 3%;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      padding: 5%;
+      font-size: medium;
+    }
+    .striked{
+      text-decoration: line-through;
+      color: black;
+    }
+    .realprice{
+      padding: 5px;
+      width: fit-content;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+    }
+    .head{
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    #MayBeYou{
+      width: 100%;
+      height: 600px;
+      /* border: 2px solid red; */
+      
+    
+      margin-top: -40%;
+    }
+
+
+
+    /* .................may be you like................ */
+
+    /* -----------------you-may-also-like-it----------------------- */
+
+#you-may-also-like-it{
+    height:90%;
+    width:100%;
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    overflow-x: scroll;
+    gap: 40px;
+}
+#you-may-also-like-it>div{
+  width: 300px;
+  height: 60%;
+
+}
+#you-may-also-like-it>div>img{
+  width: 100%;
+
+}
+
+.mayBe{
+  height: 60px;
+  
+}
+
+  </style>
+
+<nav>
+        
+        
+
+
+
+  <div id="maindiv">
+      <div class="leftdiv">
+          <div class="ham">
+              <!-- <input type="checkbox" name="toggle-nav"> -->
+              <label for="toggle-nav">
+                  <span class="menu-icon"></span>
+              </label>
+              <section class="side-nav-panel">
+              </section>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars fa-2x"></i>
+              </a>
+          </div>
+          <div class="logo">
+              <a href="index.html">
+
+                  <img class="logomain" src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="logo">
+              </a>
+          </div>
+      </div>
+      <div class="rightdiv">
+          <div class="searchdiv">
+              <div>
+                  <p><b> <a href="SearchPage.html">SEARCH</a></b> </p>
+              </div>
+              <hr>
+          </div>
+          <div class="navitems">
+            <div id="loginId"></div>
+              <div> <a href="./help/help.html">HELP</a> </div>
+              <div><a href="./cart.html"><i class="fas fa-suitcase-rolling"></i></a></div>
+          </div>
+
+      </div>
+  </div>
+
+<div class="hamburger" id="style-9">
+  <div class="divflexdiv">
+      <ul>
+          <li><a  href="women.html"><b>WOMAN</b></a></li>
+          <li><a  href="mans.html">MAN</a></li>
+          <li><a  href="boys.html">KIDS</a></li>
+      </ul>
+  </div>
+  <div class="divhamitems">
+    <ul>
+
+
+      <li><a href="new.html"> NEW </a></li>
+      <li><a href="new.html">ZEPETO | TRFNEW</a></li>
+      <li><a href="new.html">BEST SELLERSNEW</a></li>
+      <li><a href="new.html">BLAZERS </a></li>
+      <li><a href="new.html"> DRESSES | JUMPSUITS </a></li>
+      <li><a href="new.html"> SHIRTS</a></li>
+      <li><a href="new.html">TROUSERS </a></li>
+      <li><a href="new.html">TOPS | CORSETS</a></li>
+      <li><a href="new.html"> BODYSUITS </a></li>
+      <li><a href="new.html"> T-SHIRTS </a></li>
+      <li><a href="new.html"> JEANS </a></li>
+      <li><a href="new.html"> SKIRTS </a></li>
+      <li><a href="new.html"> SHORTS | SKORTS </a></li>
+      <li><a href="new.html"> CO-ORD SETS </a></li>
+      <li><a href="new.html"> SUITS </a></li>
+      <li><a href="new.html"> BASICSNEW </a></li>
+      <li><a href="new.html"> KNITWEAR </a></li>
+      <li><a href="new.html"> COATS | TRENCH COATS </a></li>
+      <li><a href="new.html"> JACKETS | OVERSHIRTS </a></li>
+      <li><a href="shoes.html"> SHOES </a></li>
+      <li><a href="bags.html"> BAGS </a></li>
+      <li><a href="new.html"> SWIMWEARNEW </a></li>
+      <li><a href="new.html"> ACCESSORIES </a></li>
+      <li><a href="new.html"> PERFUMES </a></li>
+      <li><a href="new.html"> SPRING BREEZE </a></li>
+      <li><a href="new.html" style="color: red;"> SPECIAL PRICE </a></li>
+      <li><a href="new.html">
+  </ul>
+
+
+  </div>
+
+  <div class="specialediton">
+      <a href="">  S P E C I A L &nbsp;&nbsp; E D I T I O N    </a>
+  </div>
+
+
+  <div class="info">
+      <a href="">+&nbsp;INFO </a>
+  </div>
+
+</div>
+</nav>
+
+
+
+
+
+
+
+
+    <div id="container">
+      <div id="leftbox">
+        <div>
+          <h2 class="head">MATERIALS, CARE AND ORIGIN</h2>
+        </div>
+        <div>
+          <h2 class="head">MATERIALS</h2>
+          <div>
+            <p>
+              We work with monitoring programmes to ensure compliance with
+              safety, health and quality standards for our products.
+            </p>
+
+            <p>
+              The Green to Wear 2.0 standard aims to minimise the environmental
+              impact of textile manufacturing. To that end, we have developed
+              Inditex’s The List programme, which helps guarantee both that
+              production processes are clean and that our garments are safe and
+              healthy
+            </p>
+          </div>
+          <div>
+            <span>OUTER SHELL</span>
+            <br />
+            <span>65% cotton · 35% polyester</span>
+            <br />
+            <span>LINING</span>
+            <br />
+            <span>100% cotton</span>
+            <br />
+          </div>
+        </div>
+        <div>
+          <h2 class="head">CARE</h2>
+          <div>
+            <p>Caring for your clothes is caring for the environment.</p>
+
+            <p>
+              To keep your jackets and coats clean, you only need to freshen
+              them up and go over them with a cloth or a clothes brush. If you
+              need to dry clean a garment, look for a dry cleaner that uses
+              technologies that are respectful of the environment.
+            </p>
+          </div>
+          <h2 class="head">ORIGIN</h2>
+          <div>
+            <p>
+              We work alongside our suppliers, workers, unions and international
+              bodies to develop a supply chain that respects and promotes human
+              rights, contributing to the United Nations Sustainable Development
+              Goals.
+            </p>
+
+            <p>
+              Additionally, thanks to an ongoing collaboration with our
+              suppliers, we have developed a tracking programme that allows us
+              to determine where and how our products are being made.
+            </p>
+          </div>
+        </div>
+ 
+      </div>
+      <div id="rightbox"></div>
+    </div>
+
+    <div id="MayBeYou">
+      <h1 id="Mayheading">YOU MAY ALSO LIKE
+      </h1>
+        <div id="you-may-also-like-it">
+        
+         
+           
+  
+      </div>
+    
+</div>
+    <div id="commonfooter">
+   
+  
+    
+      <div id="commonfooterlists">
+     
+         <table id="table" >
+             <thead>
+                 <div >
+  
+                     <tr>
+                         <th>help</th>
+                         <th>follow us</th>
+                         <th>company</th>
+                         <th>policies</th>
+                      </tr>
+                  </div>
+                  </thead>
+             <tbody>
+                 <tr>
+                     <td>shop at zara.com</td>
+                     <td>newsletter</td>
+                     <td>about us</td>
+                     <td>privacy policy</td>
+                 </tr>
+                 <tr>
+                     <td>product</td>
+                     <td>instagram</td>
+                     <td>join life</td>
+                     <td>purchase conditions</td>
+                 </tr>
+                 <tr>
+                     <td>payment</td>
+                     <td>facebook</td>
+                     <td>offices</td>
+                     <td>cookies settings</td>
+                 </tr>
+                 <tr>
+                     <td>shipping</td>
+                     <td>twitter</td>
+                     <td>stories</td>
+                     <td></td>
+                 </tr>
+                 <tr>
+                     <td>exchanges and returns</td>
+                     <td>pinterest</td>
+                     <td>work with us</td>
+                     <td></td>
+                 </tr>
+                 <tr>
+                     <td>shops and company</td>
+                     <td>youtube</td>
+                     <td></td>
+                     <td></td>
+                 </tr>
+                 <tr>
+                     <td>clothes collection programme</td>
+                     <td></td>
+                     <td></td>
+                 </tr>
+                 <tr>
+                     <td>my account</td>
+                 </tr>
+             </tbody>
+         </table>
+      </div>
+     
+      <div id="commonfootercountry">
+          <div>INDIA</div>
+          <div id="commonfooterrights">
+              <div>ENGLISH</div>
+              <div><i class="fa-solid fa-copyright"></i><span>ALL RIGHTS RESERVED</span></div>
+          </div>
+      </div>
+      <div id="commonfooteraddress">
+          <p>name and adress of the manufacturer:
+              <br>industria de diseno textil, s.a. (inditex, s.a.)
+              <br>avenida de la diputacion, edificio inditex, 15143, arteixo(a coruna), spain.
+          </p>
+      </div>
+  </div>
+  
+  
+  
+  
+
+
+
+
+  </body>
+</html>
+<script>
+
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+
+var loginAnchar=document.createElement("a")
+loginAnchar.setAttribute("id","userId")
+
+if(userdata.length>0){
+loginAnchar.innerText=userdata[userdata.length-1]["username"]
+}else{
+    loginAnchar.innerText="LOG IN"
+}
+if(loginAnchar.innerText=="LOG IN"){
+  loginAnchar.href="loginPage.html"
+}else{
+  loginAnchar.href="signout.html"
+}
+
+document.querySelector("#loginId").append(loginAnchar)
+
+
+
+
+
+
+
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+var user=document.querySelector("#userId")
+
+console.log(userdata)
+if(userdata.length>0){
+  user.innerText=userdata[userdata.length-1]["username"]
+}
+   console.log(user)
+
+
+
+var ham=document.querySelector(".hamburger");
+     var hamcross=document.querySelector("i");
+
+     ham.style.display="none";
+    var  count=0
+    function myFunction() {
+       count++
+       if(count%2==1){
+        ham.style.display="block";
+        hamcross.setAttribute("class","fas fa-times fa-2x")
+
+       }else{
+        ham.style.display="none";
+        hamcross.setAttribute("class","fa fa-bars fa-2x")
+       }
+       
+        
+           
+
+
+         
+     
+   
+
+
+
+       
+    }
+
+
+    
+
+    var thrick=JSON.parse(localStorage.getItem("SelectData"))||[];
+if(thrick.length==0){
+
+  
+
+    var SelectData=[
+    {
+        imageURL: "https://static.zara.net/photos///2021/I/0/1/p/4369/254/800/12/w/334/4369254800_1_1_1.jpg?ts=1634205243744",
+        productName: "QUILTED JACKET",
+        price: "₹ 1,190.00",
+        strikedPrice: "₹ 2,990.00",
+        itemGender: "female",
+        itemCategory: "JACKETS_PUFFERS",
+        sale: "45%"
+    },
+    {
+      imageURL:
+        "https://static.zara.net/photos///2021/I/0/2/p/4477/431/710/3/w/444/4477431710_2_5_1.jpg?ts=1626252294014",
+      productName: "PATCH OVERSHIRT",
+      price: "₹ 1,990.00",
+      strikedPrice: "₹ 4,590.00",
+      itemGender: "male",
+      itemCategory: "Overshirt",
+      sale: 55,
+    },
+    {
+      imageURL : "https://static.zara.net/photos///2021/I/0/3/p/2795/793/250/2/w/386/2795793250_6_1_1.jpg?ts=1634567002751",
+      productName : "PIKACHU © HOODIE",
+      price : "₹ 1,590.00",
+      strikedPrice : "₹ 1,990.00",
+      itemGender : "mens",
+      itemCategory :"SWEATSHIRTS | JACKETS",
+      sale : "",
+      age :"6-14 Years"
+    },
+    {
+        imageURL : "https://static.zara.net/photos///2021/I/0/3/p/6323/263/630/2/w/386/6323263630_6_1_1.jpg?ts=1629285423004",
+      productName : "SHIRT WITH FLORAL KNOT",
+      price : "₹ 790.00",
+      strikedPrice : "₹ 1,490.00",
+      itemGender : "womens",
+      itemCategory :"UP TO 50% OFF",
+      sale : "45% OFF",
+      age :"6-14 Years"
+
+    },
+    {
+      imageURL : "https://static.zara.net/photos///2022/V/0/3/p/6917/663/500/2/w/386/6917663500_6_1_1.jpg?ts=1638449964902",
+      productName : "CORDUROY JOGGING TROUSERS",
+      price : "₹ 990.00",
+      strikedPrice : "₹ 1,990.00",
+      itemGender : "mens",
+      itemCategory :"UP TO 50% OFF",
+      sale : "",
+      age :"6-14 Years"
+    },
+    {
+      imageURL : "https://static.zara.net/photos///2021/I/0/3/p/5643/761/700/2/w/386/5643761700_6_1_1.jpg?ts=1626764750925",
+      productName : "JUST TROPICAL T-SHIRT",
+      price : "₹ 450.00",
+      strikedPrice : "₹ 790.00",
+      itemGender : "mens",
+      itemCategory :"UP TO 50% OFF",
+      sale : "",
+      age :"6-14 Years"
+    },
+    {
+        imageURL : "https://static.zara.net/photos///2021/I/1/1/p/6580/810/030/2/w/444/6580810030_15_1_1.jpg?ts=1634130634421",
+        productName : "QUILTED MINI CROSSBODY BAG",
+        strikedPrice : "₹ 2,990.00",
+        price : "₹ 1,590.00",
+        itemGender : "Women",
+        itemCategory : "QUILTED MINI BAG ",
+        sale : "45%"
+        
+          },
+          {
+        imageURL : "https://static.zara.net/photos///2021/I/1/1/p/6445/710/049/2/w/444/6445710049_15_1_1.jpg?ts=1625228282861",
+        productName : "NYLON MINI TOTE BAG",
+        strikedPrice : "₹ 2,590.00",
+        price : "₹ 1,190.00",
+        itemGender : "Women",
+        itemCategory : "NYLON MINI BAG",
+        sale : "45%"
+        
+          }
+
+    
+      
+    ]
+
+        }
+
+
+        count=2
+if(SelectData==undefined){
+    SelectData=thrick
+}
+
+for(var i=0;i<SelectData.length-1 && i<count;i++){
+    SelectData.shift(SelectData[i])
+    SelectData.push(SelectData[i])
+    
+}
+
+
+localStorage.setItem("SelectData",JSON.stringify(SelectData));
+
+
+
+
+
+
+  var ele = JSON.parse(localStorage.getItem("productpage"));
+  var cartarr=JSON.parse(localStorage.getItem("cartdata"))||[];
+
+  creattable(ele);
+  function creattable(ele) {
+    var bgdiv = document.createElement("div");
+    var td1 = document.createElement("div");
+    var img1 = document.createElement("img");
+
+    ///set img url
+    img1.setAttribute("src", ele.imageURL);
+
+    //middle box appending completed
+    td1.append(img1);
+    //second table
+
+    var td2 = document.createElement("div");
+    var head1 = document.createElement("h1");
+    //element name
+    head1.textContent = ele.productName;
+    //console.log(head1);
+    //set striked out price and normal price
+    var smrp = document.createElement("span");
+    smrp.textContent = ele.strikedPrice;
+    smrp.setAttribute("class","striked");
+
+    var pmrp = document.createElement("span");
+    pmrp.textContent = ele.price;
+    pmrp.setAttribute("class","realprice");
+    //
+    var p4 = document.createElement("p");
+    p4.textContent = "MRP incl. of all taxes";
+    p4.style.marginBottom = 0;
+    var p5 = document.createElement("p");
+    p5.style.marginBottom = 0;
+    p5.textContent = "Colour Natural | 0706/331";
+    //SELECT OPTION CREATION
+    var select1 = document.createElement("select");
+    var option1 = document.createElement("option");
+    option1.text = "S (UK S)";
+    select1.add(option1);
+    var option2 = document.createElement("option");
+    option2.text = "M (UK M)";
+    select1.add(option2);
+    var option3 = document.createElement("option");
+    option3.text = "L (UK L)";
+    select1.add(option3);
+    var option4 = document.createElement("option");
+    option4.text = "XL (UK XL)";
+    select1.add(option4);
+
+    //LAST 3 lines
+    var a1 = document.createElement("a");
+    a1.textContent = "Check in-store availability";
+    var a2 = document.createElement("a");
+    a2.textContent = "Delivery, Exchanges and Returns";
+    var a3 = document.createElement("a");
+    a3.textContent = "Delivery, Exchanges and Returns";
+  
+    //add to cart button
+    var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    var btn2=document.createElement("button")
+    btn2.innerText="Go To Cart"
+    btn2.addEventListener("click",function(){
+     window.location.href = "cart.html"
+    })
+    btn.addEventListener("click", function () {
+      cartarr.push(ele);
+      localStorage.setItem("cartdata", JSON.stringify(cartarr));
+      alert("Added To Cart");
+      td2.append(head1, smrp, pmrp, p4, p5, select1, btn, a1, a2, a3,btn2);
+
+      
+    });
+
+    //appending to rigthmost table
+
+    td2.append(head1, smrp, pmrp, p4, p5, select1, btn, a1, a2, a3);
+    document.querySelector("#rightbox").append(td1, td2);
+
+  }
+
+ SelectData.map(function(ele) {
+  
+    var td1 = document.createElement("div");
+    var img1 = document.createElement("img");
+
+    ///set img url
+    img1.setAttribute("src", ele.imageURL);
+
+    //middle box appending completed
+    td1.append(img1);
+    //second table
+    td1.addEventListener("click",function(){
+      window.location.href="mixedData.html"
+    })
+    var td2 = document.createElement("div");
+    td2.setAttribute("class","mayBe")
+    var head1 = document.createElement("h1");
+    //element name
+    head1.textContent = ele.productName;
+    //console.log(head1);
+    //set striked out price and normal price
+    var smrp = document.createElement("span");
+    smrp.textContent = ele.strikedPrice;
+    smrp.setAttribute("class","striked");
+
+    var pmrp = document.createElement("span");
+    pmrp.textContent = ele.price;
+    pmrp.setAttribute("class","realprice");
+    
+    
+    //SELECT OPTION CREATION
+    var select1 = document.createElement("select");
+    var option1 = document.createElement("option");
+    option1.text = "S (UK S)";
+    select1.add(option1);
+    var option2 = document.createElement("option");
+    option2.text = "M (UK M)";
+    select1.add(option2);
+    var option3 = document.createElement("option");
+    option3.text = "L (UK L)";
+    select1.add(option3);
+    var option4 = document.createElement("option");
+    option4.text = "XL (UK XL)";
+    select1.add(option4);
+   
+    //add to cart button
+    var btn = document.createElement("button");
+   
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click", function () {
+      cartarr.push(ele);
+      localStorage.setItem("cartdata", JSON.stringify(cartarr));
+      alert("Added To Cart");
+      
+      // window.location.href = "cart.html"
+    });
+
+    //appending to rigthmost table
+
+    td2.append(head1, smrp, pmrp, select1, btn);
+    td1.append(td2);
+    document.querySelector("#you-may-also-like-it").append(td1);
+
+  });
+
+  
+
+var userdata=JSON.parse(localStorage.getItem("USERSDATA"))||[];
+
+var user=document.querySelector("#userId")
+
+if(userdata.length>0){
+  user.innerText=userdata[userdata.length-1]["username"]
+}
+   console.log(user)
+
+
+
+
+</script>
